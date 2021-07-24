@@ -3,6 +3,12 @@ import gd
 import keyboard
 import os
 
+speeds = [spd.value for spd in gd.api.SpeedConstant]	# speed values
+try:
+	speeds.remove(0.0)		# remove null speed
+except:
+	pass
+
 # try reading gd memory. exit if we can't
 try:
 	gdash = gd.memory.get_memory()
@@ -15,11 +21,7 @@ def check_hotkey(key):
 	if (key.name == "`"): key.name = "0"
 	# try block is here for non-digit key-presses
 	try:
-		if (int(key.name) >= 0 and int(key.name) <= 4):		# if key between 0 and 4 is pressed
-			speed = 0.2 * int(key.name) + 0.7				# handles speeds for 0-3 as the speed increases linearly
-			if key.name == "4": speed += 0.1				# correction for 4x speed
-		
-			gdash.set_speed_value(speed)					# change speed value in memory
+		gdash.set_speed_value(speeds[int(key.name)])					# change speed value in memory
 	except Exception:
 		pass
 
