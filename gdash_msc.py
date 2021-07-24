@@ -38,6 +38,7 @@ def check_hotkey(key):
 	if (key.name == hotkeys["EXIT"]): os._exit(1)	# exit if we want to exit
 	if (key.name in hotkeys["SPEEDS"]):
 		gdash.set_speed_value(speeds[hotkeys["SPEEDS"].index(key.name)])	# set speed value in memory
+		gdash.write_float32(speeds[hotkeys["SPEEDS"].index(key.name)], 0x3222D0, 0x164, 0x228, 0x648)	# set player 2 speed simultaneously
 
 keyboard.on_press(check_hotkey)		# when a key is pressed, check if its a hotkey
 
