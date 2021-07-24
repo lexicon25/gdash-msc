@@ -12,16 +12,13 @@ At no point should `gdash-msc` do anything nasty with your savefile or GD accoun
 
 At this point, `gdash-msc` will be running.
 
-### Hotkeys
+## `hk.json`
+`hk.json` is the hotkey file. `gdash-msc` will read the file to get which keys it should be checking for exiting or changing the speed. By default, `hk.json` is laid out as follows:
 
-`F12` - Exits `gdash-msc`
+```json
+{"EXIT": "f12", "SPEEDS": ["`", "1", "2", "3", "4"]}
+```
 
-`0` or `` ` `` - Change to 0.5x speed
+Meaning that `f12` is the exit hotkey, and that `, 1, 2, 3, and 4 control the speed changes (in increasing order of speed). These can be changed to your liking (though I wouldn't recommend setting any of them to the same key, weird things may happen)
 
-`1` - Change to 1x speed
-
-`2` - Change to 2x speed
-
-`3` - Change to 3x speed
-
-`4` - Change to 4x speed
+If `hk.json` is deleted, renamed, or moved before `gdash-msc` is run, it will create a new one with the default hotkeys.
