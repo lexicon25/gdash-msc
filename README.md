@@ -5,9 +5,10 @@ At no point should `gd-msc` do anything nasty with your savefile or GD account. 
 
 ## How to use
 1. Download Python 3
-2. Run `setup.bat` to install the `gd.py` and `keyboard` libraries
-3. Open Geometry Dash
-4. Run `run.bat`
+2. Download the files (either through downloading the zip file or cloning the repository)
+3. Run `setup.bat` to install the `gd.py` and `keyboard` libraries
+4. Open Geometry Dash
+5. Run `run.bat`
 
 At this point, `gd-msc` will be running.
 
@@ -24,4 +25,3 @@ At this point, `gd-msc` will be running.
 `3` - Change to 3x speed
 
 `4` - Change to 4x speed
-
