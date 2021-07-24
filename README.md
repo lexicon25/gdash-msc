@@ -10,7 +10,7 @@ At no point should `gdash-msc` do anything nasty with your savefile or GD accoun
 4. Open Geometry Dash
 5. Run `run.bat`
 
-At this point, `gdash-msc` will be running.
+At this point, `gdash-msc` will be running until you press the exit hotkey.
 
 ## `hk.json`
 `hk.json` is the hotkey file. `gdash-msc` will read the file to get which keys it should be checking for exiting or changing the speed. By default, `hk.json` is laid out as follows:
@@ -19,6 +19,6 @@ At this point, `gdash-msc` will be running.
 {"EXIT": "f12", "SPEEDS": ["`", "1", "2", "3", "4"]}
 ```
 
-Meaning that `f12` is the exit hotkey, and that `, 1, 2, 3, and 4 control the speed changes (in increasing order of speed). These can be changed to your liking (though I wouldn't recommend setting any of them to the same key, weird things may happen)
+Meaning that `f12` is the exit hotkey, and that `` ` ``, `1`, `2`, `3`, and `4` control the speed changes (in increasing order of speed). These can be changed to your liking (though I wouldn't recommend setting any of them to the same key, weird things may happen)
 
 If `hk.json` is deleted, renamed, or moved before `gdash-msc` is run, it will create a new one with the default hotkeys.

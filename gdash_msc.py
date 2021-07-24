@@ -35,10 +35,10 @@ except FileNotFoundError:
 	hk.close()
 
 def check_hotkey(key):
-	if (key.name == hotkeys["EXIT"]): os._exit(1)
+	if (key.name == hotkeys["EXIT"]): os._exit(1)	# exit if we want to exit
 	if (key.name in hotkeys["SPEEDS"]):
-		gdash.set_speed_value(speeds[hotkeys["SPEEDS"].index(key.name)])
+		gdash.set_speed_value(speeds[hotkeys["SPEEDS"].index(key.name)])	# set speed value in memory
 
 keyboard.on_press(check_hotkey)		# when a key is pressed, check if its a hotkey
 
-keyboard.wait(hotkeys["EXIT"])				# wait for input unless F12 is pressed
+keyboard.wait(hotkeys["EXIT"])				# wait for input unless the exit key is pressed.
