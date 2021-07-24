@@ -1,7 +1,7 @@
 # `gdash-msc`
-`gdash-msc` is a simple python script that allows you to manually change how fast the icon moves in Geometry Dash. It is intended to be used on Windows machines (sorry Mac and possibly Linux users)
+`gdash-msc` is a simple python script that allows you to manually change how fast the icon moves in Geometry Dash. It is intended to be used on Windows machines (sorry Mac and Linux users)
 
-At no point should `gdash-msc` do anything nasty with your savefile or GD account. It only uses `gd.py` to set the speed value of the icon.
+At no point should `gdash-msc` do anything nasty with your savefile or GD account. It only locally uses `gd.py` specifically to set the speed value of the icon.
 
 ## How to use
 1. Download Python 3

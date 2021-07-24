@@ -18,7 +18,7 @@ except ValueError:
 # try getting into GD. exit if we can't.
 try:
 	gdash = gd.memory.get_memory()
-	print("GD: MSC is now running! Press F12 to exit at any point.")
+	print("GD: MSC is now running! Press the exit hotkey (currently ", hotkeys["EXIT"], ") to exit at any point.", sep="")
 except RuntimeError:
 	print("Please open Geometry Dash before running gdash-msc.")
 	os._exit(1)
