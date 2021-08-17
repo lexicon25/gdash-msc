@@ -15,7 +15,8 @@ try:
 except ValueError:
 	pass
 
-accels = [5.980002, 5.77000188827515, 5.870002, 6.000002, 6.000002]		# x acceleration values (hardcoded as gd.py doesn't have them)
+accels = [5.980002, 5.77000188827515, 5.870002, 6.000002, 6.000002]				# x acceleration values (hardcoded as gd.py doesn't have them)
+j_accels = [10.620032, 11.1800317764282, 11.420032, 11.230032, 11.230032]		# jump acceleration values (again hardcoded)
 
 # try getting into GD. exit if we can't.
 try:
@@ -42,10 +43,12 @@ def check_hotkey(key):
 		# set player 1 speed and acceleration values.
 		gdash.set_speed_value(speeds[hotkeys["SPEEDS"].index(key.name)])
 		gdash.write_type(gd.memory.interface.Float64, accels[hotkeys["SPEEDS"].index(key.name)], 0x3222D0, 0x164, 0x224, 0x518)		# using write_type here because float64 is bugged right now
+		gdash.write_type(gd.memory.interface.Float64, j_accels[hotkeys["SPEEDS"].index(key.name)], 0x3222D0, 0x164, 0x224, 0x520)
 
 		# set player 2 speed and acceleration values.
 		gdash.write_float32(speeds[hotkeys["SPEEDS"].index(key.name)], 0x3222D0, 0x164, 0x228, 0x648)
 		gdash.write_type(gd.memory.interface.Float64, accels[hotkeys["SPEEDS"].index(key.name)], 0x3222D0, 0x164, 0x228, 0x518)
+		gdash.write_type(gd.memory.interface.Float64, accels[hotkeys["SPEEDS"].index(key.name)], 0x3222D0, 0x164, 0x228, 0x520)
 
 keyboard.on_press(check_hotkey)		# when a key is pressed, check if its a hotkey
 
