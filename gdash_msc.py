@@ -48,7 +48,7 @@ def check_hotkey(key):
 		# set player 2 speed and acceleration values.
 		gdash.write_float32(speeds[hotkeys["SPEEDS"].index(key.name)], 0x3222D0, 0x164, 0x228, 0x648)
 		gdash.write_type(gd.memory.interface.Float64, accels[hotkeys["SPEEDS"].index(key.name)], 0x3222D0, 0x164, 0x228, 0x518)
-		gdash.write_type(gd.memory.interface.Float64, accels[hotkeys["SPEEDS"].index(key.name)], 0x3222D0, 0x164, 0x228, 0x520)
+		gdash.write_type(gd.memory.interface.Float64, j_accels[hotkeys["SPEEDS"].index(key.name)], 0x3222D0, 0x164, 0x228, 0x520)
 
 keyboard.on_press(check_hotkey)		# when a key is pressed, check if its a hotkey
 
