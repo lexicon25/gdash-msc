@@ -1,3 +1,5 @@
+/* Original Geometry Dash Autosplitter by ItsMaximum (https://github.com/ItsMaximum/autosplitters/blob/006477bd3839e1bd6494eb43427d51dd822ddd59/gd.asl) */
+
 state("GeometryDash"){
   bool loadingMusic : "GeometryDash.exe", 0x003222A8, 0x128, 0x34, 0xC0, 0xC;
   string4 percentage : "GeometryDash.exe", 0x3222D0, 0x164, 0x124, 0xEC, 0x2A4, 0xE8, 0x8, 0x12C;
