@@ -4,7 +4,7 @@
 At no point should `gdash-msc` do anything nasty with your savefile or GD account. It only locally uses `gd.py` specifically to set the speed value of the icon.
 
 ## How to use
-1. Download Python 3
+1. Download and install Python 3
 2. Download the files (either through downloading the zip file or cloning the repository)
 3. Run `setup.bat` to install the `gd.py` and `keyboard` libraries
 4. Open Geometry Dash
